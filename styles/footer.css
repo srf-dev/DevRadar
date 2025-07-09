@@ -1,0 +1,121 @@
+@import url(/styles/main.css);
+
+.footer__cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+    padding: 0 2rem;
+}
+
+.footer__cta h2{
+    max-width: 52rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    text-align: center;
+}
+
+.footer__cta h2 span{
+    color: var(--color-accent-1);
+}
+
+.footer__cta form{
+    width: 100%;
+    padding: 0 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.form__input{
+    display: flex;
+    gap: 1rem;
+
+    position: relative;
+}
+
+.form__input .icon{
+    padding: 1rem;
+    height: 100%;
+    position: absolute;
+}
+
+
+.form__input input{
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: transparent;
+
+    border: 1px solid var(--color-neutral-light);
+    border-radius: .5rem;
+}
+
+.form__input input::placeholder{
+    color: var(--color-neutral-light);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.form__input input:focus{
+    border: 1px solid var(--color-dark-2);
+    outline: none;
+}
+
+.form__input input:focus::placeholder{
+    color: var(--color-dark-2);
+}
+
+.form__input .icon svg{
+    fill: var(--color-neutral-light);
+}
+
+.form__input:focus-within .icon svg{
+    fill: var(--color-dark-2);;
+}
+
+form button{
+    padding: 1rem;
+
+    border-radius: .5rem;
+
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    
+    background: var(--color-accent-1);
+
+    cursor: pointer;
+}
+
+form button:hover{
+    filter: brightness(.8);
+    transform: scale(1.1);
+}
+
+.footer__license{
+    width: 100%;
+    padding: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-dark-2);
+}
+
+.footer__license .license{
+    width: 100%;
+    text-align: center;
+    color: var(--color-neutral-light-2);
+}
+
+.footer__license .license a{
+    color: var(--color-accent-1);
+}
+
+@media (min-width: 768px) {
+    .footer__cta form{
+        grid-template-columns: 2fr 1fr;
+    }
+}

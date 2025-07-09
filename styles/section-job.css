@@ -1,0 +1,163 @@
+@import url(/styles/main.css);
+
+#section-job{
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+}
+
+.section-job__card{
+    border: 1px solid var(--color-neutral-light);
+    border-radius: .5rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#section-job:hover .section-job__card{
+    opacity: 0.6;
+}
+
+#section-job:hover .section-job__card:hover{
+   opacity: 1;
+   transform: scale(1.05);
+   transition: linear .2s;
+
+   background: var(--color-white);
+}
+
+.line{
+    width: 100%;
+    height: 0.5px;
+    background: var(--color-neutral-light);
+}
+
+.card__header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__header .container{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card__header .container .circle{
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--color-neutral-light);
+    border-radius: 100%;
+}
+
+.card__header .container .employer-name{
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.card__header .tag{
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform:capitalize;
+
+    border-radius: .5rem;
+    padding: 4px .5rem;
+}
+
+.card__header .tag.frontend{
+    color: var(--color-accent-2);
+    border: 1px solid var(--color-accent-2);
+    background: var(--color-accent-2-30);
+}
+
+.card__header .tag.fullstack{
+    color: var(--color-accent-3);
+    border: 1px solid var(--color-accent-3);
+    background: var(--color-accent-3-30);
+}
+
+.card__header .tag.backend{
+    color: var(--color-accent-4);
+    border: 1px solid var(--color-accent-4);
+    background: var(--color-accent-4-20);
+}
+
+.card__header .tag.all{
+    display: none;
+}
+
+.card__information{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+    height: 100%;
+}
+
+.card__information span{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent-1);
+}
+
+.card__information .name{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card__information .name h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card__information .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.btn-card{
+    background: var(--color-accent-1);
+
+    padding: .5rem 2.5rem;
+    border-radius: .5rem;
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--color-white);
+}
+
+.btn-card:hover{
+    filter: brightness(0.8);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #section-job{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    #section-job{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .btn-card{
+        padding: 0.8rem 3rem;
+        font-size: 1.125rem;
+    }
+}
+
